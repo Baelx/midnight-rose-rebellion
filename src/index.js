@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { Router } from 'react-router-dom'
+import { BrowserRouter} from 'react-router-dom'
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -9,9 +9,9 @@ import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <BrowserRouter>
      <App />
-    </Router>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

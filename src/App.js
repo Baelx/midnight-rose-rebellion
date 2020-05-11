@@ -4,7 +4,7 @@ import './App.scss';
 import { Switch, Route } from 'react-router-dom'
 
 import { HomePage } from './pages/home/home-page.component'
-import { ShopPage } from './pages/shop/shop-page.component'
+import ShopPage from './pages/shop/shop-page.component'
 
 function App() {
   return (

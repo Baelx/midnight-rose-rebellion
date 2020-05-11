@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom'
 
 import './image-card.styles.scss'
 
-const ImageCard = ({title, imageUrl, history}) => {
+const ImageCard = ({id, title, imageUrl, size, linkUrl, match, history}) => {
 
     const CardBody = styled.div`
         background-image: url(${imageUrl});
@@ -18,10 +18,15 @@ const ImageCard = ({title, imageUrl, history}) => {
         justify-content: center;
         border: 1px solid black;
         margin: 0 7.5px 15px;
-    `
+
+        ${({ size }) => size && `height: 380px;`}
+    `;
+
+    console.log(match, linkUrl)
+
 
     return (
-        <CardBody onClick={() => history.push('shop ')}>
+        <CardBody onClick={() => history.push(`${match.url}${linkUrl}`)}>
             <div className="content">
                 <h2 className="title">{title}</h2>
                 <span className="subtitle">Shop now</span>
